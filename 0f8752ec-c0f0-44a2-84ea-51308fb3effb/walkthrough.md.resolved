@@ -1,0 +1,66 @@
+# Walkthrough - Coffre-Fort Documentaire
+
+Ce document décrit comment lancer et vérifier le bon fonctionnement de la solution.
+
+## 1. Lancement de l'Infrastructure
+
+Dans le terminal, exécutez la commande suivante à la racine du projet :
+
+```bash
+cd coffre_fort_documentaire
+docker-compose up -d --build
+```
+
+> [!NOTE]
+> Le premier lancement peut prendre plusieurs minutes (téléchargement des images Docker, initialisation de la base de données Mayan, téléchargement des modèles IA).
+
+## 2. Vérification des Services
+
+Vérifiez que tous les conteneurs sont actifs :
+
+```bash
+docker-compose ps
+```
+
+Vous devriez voir :
+- `coffre-fort-frontend` (Port 3000)
+- `coffre-fort-backend` (Port 8000)
+- `coffre-fort-ai` (Port 8001)
+- [mayan](file:///home/ikun/.gemini/antigravity/scratch/coffre_fort_documentaire/backend/main.py#70-79) (Port 8080)
+- `postgres`
+- `redis`
+
+## 3. Test Utilisateur
+
+### Accès au Frontend
+Ouvrez votre navigateur sur [http://localhost:3000](http://localhost:3000).
+
+### Connexion
+Utilisez les identifiants par défaut :
+- **Username** : `admin`
+- **Password** : `admin`
+
+### Upload de Document
+1.  Cliquez sur le bouton **Upload Document** en haut à droite.
+2.  Sélectionnez un fichier (PDF ou Texte).
+3.  Validez.
+
+### Résultat
+Le document doit apparaître dans la grille.
+- **Titre** : Nom du fichier.
+- **IA** : Cliquez sur le document (ou survolez) pour voir le résumé et les mots-clés générés.
+
+## 4. Accès Administration (Mayan EDMS)
+Pour une gestion avancée, accédez à Mayan EDMS sur [http://localhost:8080](http://localhost:8080).
+- **User** : `admin`
+- **Pass** : `adminpass` (ou celui défini dans [.env](file:///home/ikun/.gemini/antigravity/scratch/coffre_fort_documentaire/.env))
+
+## Dépannage
+Si l'upload échoue, vérifiez les logs du backend :
+```bash
+docker-compose logs -f backend
+```
+Si l'IA ne répond pas (timeout sur machines lentes), vérifiez les logs du service IA :
+```bash
+docker-compose logs -f ai-service
+```

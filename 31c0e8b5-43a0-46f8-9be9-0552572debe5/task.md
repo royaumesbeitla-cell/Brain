@@ -1,0 +1,31 @@
+# StarConnect CMS Development Tasks
+
+- [/] **Project Initialization** <!-- id: 0 -->
+    - [x] Initialize Next.js project with TypeScript and Tailwind CSS <!-- id: 1 -->
+    - [x] Set up Prisma with PostgreSQL <!-- id: 2 -->
+    - [x] Configure Authentication (NextAuth.js / Auth.js) <!-- id: 3 -->
+- [/] **Core CMS Features** <!-- id: 4 -->
+    - [x] Database Schema Design (Users, Posts, Media, Settings) <!-- id: 5 -->
+    - [x] Content Management API (CRUD for Articles, Videos, Galleries) <!-- id: 6 -->
+    - [x] Admin Dashboard for Content Management <!-- id: 7 -->
+- [/] **User Profiles & Customization** <!-- id: 8 -->
+    - [x] Public Profile Page Implementation <!-- id: 9 -->
+    - [ ] Theme/Layout Customization System <!-- id: 10 -->
+    - [ ] Privacy Settings Implementation <!-- id: 11 -->
+- [/] **Social Media & Integration** <!-- id: 12 -->
+    - [x] Social Media Link Integration <!-- id: 13 -->
+    - [x] Auto-sharing hooks (Mock/Stub) <!-- id: 14 -->
+- [/] **Monetization** <!-- id: 15 -->
+    - [x] Subscription Tiers Setup <!-- id: 16 -->
+    - [x] Premium Content Gating <!-- id: 17 -->
+- [/] **Crisis Communication Tools** <!-- id: 18 -->
+    - [x] "Crisis Mode" Toggle <!-- id: 19 -->
+    - [x] Official Statement Component <!-- id: 20 -->
+    - [x] Predefined Landing Pages <!-- id: 21 -->
+- [/] **Analytics & Moderation** <!-- id: 22 -->
+    - [x] Basic Analytics Dashboard <!-- id: 23 -->
+    - [x] Comment System with Moderation Tools <!-- id: 24 -->
+- [x] **Final Polish & Verification** <!-- id: 25 -->
+    - [x] Responsive Design Check <!-- id: 26 -->
+    - [x] Security Audit (Headers, Input Validation) <!-- id: 27 -->
+    - [x] Walkthrough & Documentation <!-- id: 28 -->

@@ -1,0 +1,9 @@
+# Tâches - Coffre-Fort Documentaire
+
+- [ ] Initialisation du projet et Architecture <!-- id: 0 -->
+- [ ] Configuration Docker Compose (Mayan EDMS + DB + Redis) <!-- id: 1 -->
+- [ ] Développement du Service IA (Local LLM/NLP) <!-- id: 2 -->
+- [ ] Développement du Backend (FastAPI) <!-- id: 3 -->
+- [ ] Développement du Frontend (React) <!-- id: 4 -->
+- [ ] Intégration et Tests Finaux <!-- id: 5 -->
+- [ ] Documentation (README) <!-- id: 6 -->
